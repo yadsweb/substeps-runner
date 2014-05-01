@@ -17,6 +17,8 @@
 
 	<properties>
 		<maven.version>2.2.1</maven.version>
+        <nexus.release>http://78.90.164.179:8091/nexus/content/repositories/releases/</nexus.release>
+        <nexus.snapshot>http://78.90.164.179:8091/nexus/content/repositories/snapshots/</nexus.snapshot>
 	</properties>
 
 	<description>A maven plugin for substeps BDD framework</description>
@@ -121,12 +123,12 @@
         <repository>
             <id>deployment</id>
             <name>Internal Releases</name>
-            <url>http://78.90.164.179:8091/nexus/content/repositories/releases/</url>
+            <url>${nexus.release}</url>
         </repository>
         <snapshotRepository>
             <id>deployment</id>
             <name>Internal Releases</name>
-            <url>http://78.90.164.179:8091/nexus/content/repositories/snapshots/</url>
+            <url>nexus.snapshot</url>
         </snapshotRepository>
     </distributionManagement>
 
